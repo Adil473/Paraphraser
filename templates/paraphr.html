@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paraphraser</title>
+        
+    </head>
+<body>
+    {% extends 'frontend.html' %}
+
+    {% block content%}
+    <form action="paraphr">
+        <div class="boxs">
+            <div class="grid">
+                <label for="inputText">
+                    <span class="input" placeholder="After writing or pasting your text,use the paraphrasing button below.">Enter the text you want to paraphrase</span>
+                    <textarea name="ip_text" class="inputText">
+                        {{variable1}}
+                    </textarea>
+                </label>
+                <label for="outputText">
+                    <span class="output">Paraphrased text</span>
+                    
+                    <textarea name="outputText" class="outputText" placeholder="You will get the resulting text here after the paraphrasing tool has finished rephrasing" readonly>
+                      {{variable2}}
+                    </textarea>
+                    
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="button">
+          <button type="submut" class="btn btn-primary" data-bs-toggle="button">Paraphrase</button>
+        </form>   
+    {% endblock %}
+
+</body>
+</html>
